@@ -1,0 +1,28 @@
+.page{
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  //background:#2795E3;
+  background: #fff;
+  //background: linear-gradient(#ffff66,#2795E3);
+  background: linear-gradient(rgba(105,255,255,.25),rgba(105,255,255,1));
+}
+
+.hills{
+  background-image:  url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.tree{
+  background-image: url('../img/tree.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 550px 1000px;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}

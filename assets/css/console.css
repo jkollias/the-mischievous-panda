@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'zigregular';
+    src: url('../fonts/zig_____-webfont.woff2') format('woff2'),
+         url('../fonts/zig_____-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+   font-family: 'zigregular', san-serif;
+
+   color:#fff;
+}
+
+#console{
+  position: fixed;
+  width: 100%;
+  background: green;
+  bottom: 0;
+  padding: 1em;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 690px){
+  #console{	 
+	 background: none;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 bottom: auto;
+	 color: green;
+	 font-size: 24px;
+  }
+}
+
+form input[type="text"]{
+  width: 1em;
+  margin-right: 1em;
+  padding: .5em;
+  text-align: center;
+}
+
+form button{
+  display: inline-block;
+  cursor: pointer;
+  border-radius: .25em;
+  border: none;
+  padding: .5em;
+  background: #994922;
+  color: #fff;
+  text-transfrom: uppercase;
+}
+
+@media only screen and (min-width: 690px){
+	form button{
+		font-size: 24px;
+	}
+}
+
+
+#mystery_word{
+  margin-bottom: 2em;
+  color: #299028;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 690px){
+	#mystery_word{
+		font-size: 24px;
+	}
+}
+
+#mystery_word:after{
+  clear: left;
+  content: '.';
+  height: 0;
+  width: 100%;
+  display: block;
+  visibility: hidden;
+}
+
+#mystery_word div{
+  border: 1px solid #ccc;
+  width: 1em;
+  padding: .5em;
+  float: left;
+  text-align: center;
+  margin-right: .5em;
+  background: #fff;
+  text-transform: lowercase;
+}
+
+#mystery_word div:first-child{
+  text-transform: uppercase;
+}
+
+#misses-container h2{
+  font-size: 12px;
+}
+

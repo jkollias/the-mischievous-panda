@@ -1,0 +1,137 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+#game-screen{
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+#home-screen{
+  background: rgba(41, 144, 40, 1);
+  background-image: url('../svg/leaves.svg');
+  background-size: 100% auto;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.inner-page{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+#logo{
+  font-size: 50px;
+  line-height: 1;
+  color: #fff;
+}
+
+#logo .icon{
+  display: block;
+  margin: 0 auto;
+  animation: headturn 3s infinite alternate;
+  transform-origin(center, center);
+  transform: rotate(-10deg);
+}
+
+@keyframes headturn{
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(20deg); }
+}
+#logo .type{
+  display: block;
+  margin: 0 auto;
+}
+
+button.play-btn{
+  cursor: pointer;
+  background: rgba(144,89,47,1);
+  padding: 1em;
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: .25em;
+}
+
+button.play-btn:hover, button.play-btn:active, button.play-btn:focus{
+  background: rgba(134,79,37,1);
+}
+
+
+
+/*////End Screen /////*/
+#end-screen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2000;
+  opacity: 0;
+  animation: 1s fade--in .5s forwards;
+}
+
+@keyframes fade--in{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.inner-alert{
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: #333;
+  transform: translate(-50%,-50%);
+}
+
+.end-image{
+  width: 15em;
+  margin: 0 auto;
+}
+
+.end-image img{
+  width: 100%;
+  height: auto;
+}
+
+.end-message{
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.inner-alert{
+  font-size: 10px;
+  width: 30em;
+  background: none;
+}
+
+.inner-alert button{
+  background: rgb(144, 89, 47) none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 0.25em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8em;
+  padding: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: .5em auto;
+}

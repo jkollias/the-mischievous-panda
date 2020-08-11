@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Master</title>
+<link href="https://fonts.googleapis.com/css?family=Lakki+Reddy|Permanent+Marker" rel="stylesheet">
+
+<link rel='stylesheet' href="assets/css/console.css" type='text/css' media='all' />
+<link rel='stylesheet' href="assets/css/screens-new.css" type='text/css' media='all' />
+<link rel='stylesheet' href="assets/css/panda.css" type='text/css' media='all' />
+<link rel='stylesheet' href="assets/css/backgrounds.css" type='text/css' media='all' />
+
+</head>
+
+<body>
+<div class="page">
+
+  <audio id="lose-audio">
+    <source src="assets/sound/game-over.mp3"  type="audio/mpeg">
+  </audio>
+  <audio id="win-audio">
+    <source src="assets/sound/winning.mp3"  type="audio/mpeg">
+  </audio>
+  <audio id="background-music">
+    <source src="assets/sound/music-lowered.mp3"  type="audio/mpeg">
+  </audio>
+  <audio id="panada-yell">
+    <source src="assets/sound/panda-yell3.mp3"  type="audio/mpeg">
+  </audio>
+
+
+  <div  id="home-screen">
+    <div class="top-leaves"></div>
+    <div class="bottom-leaves"></div>
+    <div class="inner-page">
+       <div id="logo">
+         <img src="assets/img/home-page-logo-icon.png" alt="The Mischievous Panda Icon" class="icon">
+         <img src="assets/img/home-page-logo-type.png" alt="The Mischievous Panda" class="type">
+       </div>
+       <button onClick="startGame('home-screen');" class="play-btn">Start Game</button>
+    </div>
+  </div>
+
+
+<div id="game-screen">
+  <div class="hills">
+    <div class="tree">
+
+      <div id="animations">
+
+        <div id="panda">
+          <div class="sleeping">
+            <div class="zzz">
+              <span>Z</span>
+              <span>Z</span>
+              <span>Z</span>
+            </div>
+            <img src="assets/img/sleeping.png" >
+            <img src="assets/img/sleeping.arm.png" class="swinging">
+          </div><!--/sleeping -->
+
+          <div class="hanging">
+            <div class="movingfeet"></div>
+            <img src="assets/img/hanging-panda.png">
+          </div>
+
+          <div class="hanging2">
+            <div class="movingfoot"></div>
+            <div class="movingfoot-right"></div>
+            <img src="assets/img/hanging-panda2.png" >
+          </div>
+
+          <div class="falling">
+            <img src="assets/img/falling-panda.png" class="falling-panda">
+            <img src="assets/img/branch1.png" class="branch1">
+            <img src="assets/img/branch2.png" class="branch2">
+          </div><!-- panda -->
+        </div><!-- panda -->
+
+
+      </div><!-- animations -->
+
+      <div id="console">
+        <h1 style="display: none;">Guess <span id="the-word">A Random Word</span></h1>
+        <div id="mystery_word"></div>
+          <form id="answer_form">
+            <label>Guess A Letter</label> <input type="text" value="" id="letter_guess" maxlength="1" />
+            <button onClick="checkLetter(); return false;">Guess</button>
+          </form>
+          <div id="result_message"></div>
+          <div id="message_to_user"></div>
+          <div id="misses-container">
+            <h2>Misses: <span id="wrong_letter"></span></h2>
+          </div>
+          <h2 style="display: none;">Counter: <span id="wrong_counter"></span></h2>
+      </div><!-- console -->
+
+    </div><!-- tree -->
+  </div><!--/hills-->
+
+</div><!-- game-screen -->
+</div><!-- page -->
+
+<script type="text/javascript" src="assets/js/hangman.js"></script>
+</body>
+
+
+</html>
