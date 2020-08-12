@@ -13,8 +13,7 @@ html, body{
 }
 
 #home-screen{
-  background: rgba(41, 144, 40, 1);
-  background-image: url('../svg/leaves.svg');
+  background: #333;
   background-size: 100% auto;
   height: 100%;
   width: 100%;
@@ -24,6 +23,26 @@ html, body{
   top: 0;
   left: 0;
   position: fixed;
+}
+
+.top-leaves{
+  background: url('../svg/leaves.svg');
+  background-size: cover;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bottom-leaves{
+  background: url('../svg/leaves.svg');
+  background-size: cover;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
 }
 
 .inner-page{
@@ -81,7 +100,7 @@ button.play-btn:hover, button.play-btn:active, button.play-btn:focus{
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,.5);
+  background: #333;
   z-index: 2000;
   opacity: 0;
   animation: 1s fade--in .5s forwards;
@@ -97,7 +116,7 @@ button.play-btn:hover, button.play-btn:active, button.play-btn:focus{
   position: fixed;
   top: 50%;
   left: 50%;
-  color: #333;
+  color: #fff;
   transform: translate(-50%,-50%);
 }
 
