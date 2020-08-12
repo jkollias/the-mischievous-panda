@@ -116,6 +116,7 @@ var playSound = function(audio){
 
 var stopSound = function(audio){
   document.getElementById(audio).pause();
+  document.getElementById(audio).currentTime = 0;
 }
 
 var youWin = function(){
@@ -152,7 +153,6 @@ var restartGame = function(){
 }
 
 var endScreen = function(txt) {
-  //wait(1000);
   stopSound("background-music");
   d = document;
   var endScreen = d.createElement("div");
@@ -172,7 +172,3 @@ var wait  = function(ms){
      end = new Date().getTime();
   }
 }
-
-window.addEventListener('load', function(){
-  //startGame();
-});
