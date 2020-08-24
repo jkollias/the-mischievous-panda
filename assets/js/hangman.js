@@ -1,6 +1,6 @@
-//var answers = ["Face", "Place", "Habibi", "Panda" ,"Reptile",  "Flower", "Fishes"];
+
 var answers =["coffee","bottle","plethora","lawyer","pirate","ninja","doctor","finish","bee","sing","shout","juice","message","slick","awards","architect"]
-//var answers = ["test"];
+
 var mysteryWord = document.getElementById("mystery_word");
 var message = document.getElementById("result_message");
 var counterId = document.getElementById("wrong_counter");
@@ -21,14 +21,18 @@ var endImg = document.getElementById('end_message');
 
 //////////////Functions/////////////
 
-var genNumb = function(x){
-   var randNumb = Math.floor(Math.random() * x);
-   return randNumb;
+var randomNumber = function(x){
+   return Math.floor(Math.random() * x);
 }
 
-var getWord = function(){
-  randomWord = answers[genNumb( (answers.length) )];
-  document.getElementById('the-word').innerHTML = randomWord;
+var getRandomWord = function(){
+  return answers[randomNumber( (answers.length) )];
+}
+
+randomWord = getRandomWord();
+
+var setRandomWord = function(){
+  document.getElementById('the-word').innerHTML = getRandomWord();
   correctAns = randomWord;
 }
 
@@ -46,7 +50,7 @@ var checkWin = function(){
   }
 }
 
-var createBoxes = function(){
+var createLetterBoxes = function(){
   for (let i = 0; i < randomWord.length; i++) {
     let answerBox = document.createElement("div");
 	  answerBox.setAttribute("id","letter_"+i);
@@ -57,6 +61,10 @@ var createBoxes = function(){
 
 var clearAnswer = function(){
   document.getElementById("letter_guess").value ="";
+}
+
+function focusCursorOnGuessBox(){
+	document.getElementById('letter_guess').focus();
 }
 
 var showPanda = function(){
@@ -107,7 +115,7 @@ var checkLetter = function(){
   }
   clearAnswer();
   checkWin();
-  document.getElementById('letter_guess').focus();
+  focusCursorOnGuessBox();
 }
 
 var playSound = function(audio){
@@ -123,7 +131,7 @@ var youWin = function(){
   alert("You Win");
 }
 
-/*//////////////////////*/
+/*/////////Screens /////////////*/
 
 var startGame = function(screenId){
   let screen = document.getElementById(screenId);
@@ -132,8 +140,8 @@ var startGame = function(screenId){
   clearAnswer();
   playSound("background-music");
   mysteryWord.innerHTML="";
-  getWord();
-  createBoxes();
+  setRandomWord();
+  createLetterBoxes();
 }
 
 var restartGame = function(){
